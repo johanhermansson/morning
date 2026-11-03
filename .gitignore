@@ -1,0 +1,4 @@
+.DS_Store
+.claude/settings.local.json
+# Dagliga planer innehåller kund- och ärendedetaljer
+dagar/

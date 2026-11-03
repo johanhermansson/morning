@@ -1,0 +1,66 @@
+{
+  "timezone": "Europe/Stockholm",
+
+  "_comment_day": "Arbetsdagens ramar som planen byggs inom. Lunch och buffert blockas alltid.",
+  "workday": {
+    "start": "08:30",
+    "end": "17:00",
+    "lunch": "12:00-12:45",
+    "max_deep_work_tasks": 3,
+    "deep_work_block_min": 90,
+    "admin_block_min": 30
+  },
+
+  "jira": {
+    "cloud_id": "d7c346e2-5f39-4b33-b518-45a8a1e0198a",
+    "site": "https://memira.atlassian.net",
+    "projects": {
+      "WEB": "Memira",
+      "WRMM2": "Memira",
+      "BW": "Bey / Bergman Clinics",
+      "NKW": "Nordiska Kliniken"
+    },
+
+    "_comment_status": "Statusnamn -> hink. Status som saknas här klassas efter statusCategory (To Do -> redo, In Progress -> pågående).",
+    "status_buckets": {
+      "In Progress": "pagaende",
+      "Pågår": "pagaende",
+      "To Do": "redo",
+      "To Do - Weekly Sprint": "redo",
+      "Ready for deploy": "redo_deploy",
+      "Ready for test": "vantar",
+      "Awaiting approval": "vantar",
+      "Awaiting implementation": "redo_om_min",
+      "Mini backlog": "parkerad"
+    },
+
+    "_comment_waiting": "Sammanfattningar som börjar så räknas alltid som 'väntar på någon annan', oavsett status.",
+    "waiting_prefixes": ["Waiting for", "Waiting:", "Blocked:", "Väntar"],
+
+    "stale_days": 45
+  },
+
+  "_comment_repos": "Jira-projekt -> repon i ~/Sites. Grenar med ärendenyckeln i namnet visar vad som faktiskt pågår, även när Jira inte är uppdaterat.",
+  "repos": {
+    "WEB": ["memira"],
+    "WRMM2": ["memira"],
+    "BW": ["beyclinics"],
+    "NKW": ["nk"]
+  },
+  "sites_dir": "/Users/johan/Sites",
+
+  "mail": {
+    "_comment": "Gmail-sökningar. {since} ersätts med senaste arbetsdagen (fredag om det är måndag).",
+    "inbox_query": "in:inbox after:{since} -category:promotions -category:social",
+    "awaiting_reply_query": "in:sent after:{since_week}",
+    "ignore_senders": ["noreply", "no-reply", "notifications@", "jira@", "atlassian.net", "github.com", "kinsta.com"]
+  },
+
+  "calendar": {
+    "_comment": "Tom lista = primärkalendern. Lägg till fler kalender-id:n (e-postadresser) vid behov.",
+    "calendar_ids": [],
+    "prep_min_before_external_meeting": 15
+  },
+
+  "output_dir": "dagar"
+}
